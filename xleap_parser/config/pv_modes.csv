@@ -1,0 +1,98 @@
+line,mode,role,pv,device,segment,attr,in_zihan_hxr_dataset,notes
+HXR,XLEAP,taper_discriminator,USEG:UNDH:1450:GapAct,USEG,1450,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:1550:GapAct,USEG,1550,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:1650:GapAct,USEG,1650,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:1750:GapAct,USEG,1750,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:1850:GapAct,USEG,1850,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:1950:GapAct,USEG,1950,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:2050:GapAct,USEG,2050,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:2250:GapAct,USEG,2250,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:2350:GapAct,USEG,2350,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:2450:GapAct,USEG,2450,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:2550:GapAct,USEG,2550,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:2650:GapAct,USEG,2650,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:2750:GapAct,USEG,2750,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:2950:GapAct,USEG,2950,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:3050:GapAct,USEG,3050,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:3150:GapAct,USEG,3150,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:3250:GapAct,USEG,3250,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:3350:GapAct,USEG,3350,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:3450:GapAct,USEG,3450,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:3550:GapAct,USEG,3550,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:3650:GapAct,USEG,3650,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:3750:GapAct,USEG,3750,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:3850:GapAct,USEG,3850,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:3950:GapAct,USEG,3950,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:4050:GapAct,USEG,4050,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:4150:GapAct,USEG,4150,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:4250:GapAct,USEG,4250,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:4350:GapAct,USEG,4350,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:4450:GapAct,USEG,4450,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:4550:GapAct,USEG,4550,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:4650:GapAct,USEG,4650,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,taper_discriminator,USEG:UNDH:4750:GapAct,USEG,4750,GapAct,yes,KAct not archived for HXR -> gap; detector needs gap->K (or sign flip)
+HXR,XLEAP,beam_momentum(gamma),BEND:DMPH:400:BACT,BEND,,,yes,dump momentum GeV/c -> gamma (physics.py)
+HXR,SASE,lasing_gate(target),GDET:FEE1:241:ENRC,GDET,,,yes,FEL pulse energy; above-floor = lasing/delivering
+HXR,SASE,complement_rule,(no positive PV),(no positive PV),,,,SASE = lasing & steady & NOT(XLEAP taper | self-seed | two-color)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:1495:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:1595:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:1695:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:1795:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:1895:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:1995:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:2095:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:2295:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:2395:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:2495:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:2595:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:2695:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:2795:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:2995:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:3095:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:3195:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:3295:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:3395:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:3495:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:3595:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:3695:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:3795:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:3895:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:3995:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:4095:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:4195:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:4295:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:4395:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:4495:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:4595:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,phase_shifter,PHAS:UNDH:4695:GapAct,PHAS,,,yes,phase-shifter (partial seeding signal)
+HXR,SELF_SEEDING,MISSING_discriminator,(HXRSS chicane state PV - NOT in dataset),(HXRSS chicane state PV - NOT in dataset),,,no,needs Aaron Reed's PVs to positively detect self-seeding
+SXR,XLEAP,taper_discriminator,USEG:UNDS:2150:KAct,USEG,2150,KAct,n/a (no SXR data pulled),KAct works on SXR -> parser native
+SXR,XLEAP,taper_discriminator,USEG:UNDS:2250:KAct,USEG,2250,KAct,n/a (no SXR data pulled),KAct works on SXR -> parser native
+SXR,XLEAP,taper_discriminator,USEG:UNDS:2350:KAct,USEG,2350,KAct,n/a (no SXR data pulled),KAct works on SXR -> parser native
+SXR,XLEAP,taper_discriminator,USEG:UNDS:2450:KAct,USEG,2450,KAct,n/a (no SXR data pulled),KAct works on SXR -> parser native
+SXR,XLEAP,taper_discriminator,USEG:UNDS:2550:KAct,USEG,2550,KAct,n/a (no SXR data pulled),KAct works on SXR -> parser native
+SXR,XLEAP,taper_discriminator,USEG:UNDS:2650:KAct,USEG,2650,KAct,n/a (no SXR data pulled),KAct works on SXR -> parser native
+SXR,XLEAP,taper_discriminator,USEG:UNDS:2750:KAct,USEG,2750,KAct,n/a (no SXR data pulled),KAct works on SXR -> parser native
+SXR,XLEAP,taper_discriminator,USEG:UNDS:2850:KAct,USEG,2850,KAct,n/a (no SXR data pulled),KAct works on SXR -> parser native
+SXR,XLEAP,taper_discriminator,USEG:UNDS:2950:KAct,USEG,2950,KAct,n/a (no SXR data pulled),KAct works on SXR -> parser native
+SXR,XLEAP,taper_discriminator,USEG:UNDS:3050:KAct,USEG,3050,KAct,n/a (no SXR data pulled),KAct works on SXR -> parser native
+SXR,XLEAP,taper_discriminator,USEG:UNDS:3150:KAct,USEG,3150,KAct,n/a (no SXR data pulled),KAct works on SXR -> parser native
+SXR,XLEAP,taper_discriminator,USEG:UNDS:3250:KAct,USEG,3250,KAct,n/a (no SXR data pulled),KAct works on SXR -> parser native
+SXR,XLEAP,taper_discriminator,USEG:UNDS:3350:KAct,USEG,3350,KAct,n/a (no SXR data pulled),KAct works on SXR -> parser native
+SXR,XLEAP,taper_discriminator,USEG:UNDS:3450:KAct,USEG,3450,KAct,n/a (no SXR data pulled),KAct works on SXR -> parser native
+SXR,XLEAP,taper_discriminator,USEG:UNDS:3650:KAct,USEG,3650,KAct,n/a (no SXR data pulled),KAct works on SXR -> parser native
+SXR,XLEAP,taper_discriminator,USEG:UNDS:3750:KAct,USEG,3750,KAct,n/a (no SXR data pulled),KAct works on SXR -> parser native
+SXR,XLEAP,taper_discriminator,USEG:UNDS:3850:KAct,USEG,3850,KAct,n/a (no SXR data pulled),KAct works on SXR -> parser native
+SXR,XLEAP,taper_discriminator,USEG:UNDS:3950:KAct,USEG,3950,KAct,n/a (no SXR data pulled),KAct works on SXR -> parser native
+SXR,XLEAP,taper_discriminator,USEG:UNDS:4050:KAct,USEG,4050,KAct,n/a (no SXR data pulled),KAct works on SXR -> parser native
+SXR,XLEAP,taper_discriminator,USEG:UNDS:4150:KAct,USEG,4150,KAct,n/a (no SXR data pulled),KAct works on SXR -> parser native
+SXR,XLEAP,taper_discriminator,USEG:UNDS:4250:KAct,USEG,4250,KAct,n/a (no SXR data pulled),KAct works on SXR -> parser native
+SXR,XLEAP,taper_discriminator,USEG:UNDS:4350:KAct,USEG,4350,KAct,n/a (no SXR data pulled),KAct works on SXR -> parser native
+SXR,XLEAP,taper_discriminator,USEG:UNDS:4450:KAct,USEG,4450,KAct,n/a (no SXR data pulled),KAct works on SXR -> parser native
+SXR,XLEAP,taper_discriminator,USEG:UNDS:4550:KAct,USEG,4550,KAct,n/a (no SXR data pulled),KAct works on SXR -> parser native
+SXR,XLEAP,taper_discriminator,USEG:UNDS:4650:KAct,USEG,4650,KAct,n/a (no SXR data pulled),KAct works on SXR -> parser native
+SXR,XLEAP,taper_discriminator,USEG:UNDS:4750:KAct,USEG,4750,KAct,n/a (no SXR data pulled),KAct works on SXR -> parser native
+SXR,XLEAP,beam_momentum(gamma),BEND:DMPS:400:BACT,BEND,,,n/a,dump momentum GeV/c -> gamma (physics.py)
+SXR,SASE,lasing_gate(target),(SXR FEL energy PV - TODO confirm),(SXR FEL energy PV - TODO confirm),,,n/a,soft-line pulse-energy PV not yet identified; not needed by taper parser
+SXR,SASE,complement_rule,(no positive PV),(no positive PV),,,,SASE = lasing & steady & NOT(XLEAP taper | self-seed | two-color)
+SXR,SELF_SEEDING,MISSING_discriminator,(SXR seeding PVs - not pulled),(SXR seeding PVs - not pulled),,,n/a,rare on SXR; revisit if needed

@@ -5,7 +5,7 @@ Fetches a couple of key PVs across several years so you can find a window where
 the USEG:UNDH undulators existed (they are LCLS-II-era and were not archived in
 2018). Run from the repo root:
 
-    python probe_archive.py
+    python xleap_parser/scripts/probe_archive.py
 """
 from datetime import datetime, timezone
 

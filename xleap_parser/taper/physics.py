@@ -30,7 +30,39 @@ __all__ = [
     "dk_to_dgamma",
     "slippage_time_s",
     "taper_mev_per_fs",
+    "kact_from_gap_mm",
 ]
+
+# --- Undulator gap -> K (HXR only) -------------------------------------------
+# The hard line archives GapAct (mm), not KAct, so we reconstruct K from gap with
+# the planar-hybrid Halbach peak-field form and K = 0.9337 * B0[T] * lambda_u[cm]:
+#     r  = gap / lambda_u
+#     B0 = a * exp(-b*r + c*r^2)      [T]
+#     K  = 0.09337 * B0 * lambda_u[mm]
+#
+# !!! PROVISIONAL CONSTANTS !!!  Generic NdFeB-hybrid coefficients with the LCLS
+# HXR period -- enough to get the taper *sign* right (K is monotone-decreasing in
+# gap, so an XLEAP up-taper in K = a down-taper in gap), but the absolute taper
+# magnitude (MeV/fs) is NOT trustworthy until replaced.
+# TODO(undulator group / Aaron Reed): drop in the measured HXR K(gap) calibration,
+# or fit a,b,c from an archived window where BOTH KAct and GapAct exist.
+HXR_UNDULATOR_PERIOD_MM: float = 26.0
+_HALBACH_A: float = 3.694
+_HALBACH_B: float = 5.068
+_HALBACH_C: float = 1.520
+
+
+def kact_from_gap_mm(gap_mm: ArrayLike) -> NDArray[np.float64]:
+    """Undulator K reconstructed from gap (mm) via the Halbach peak-field form.
+
+    Vectorized/broadcasting like the rest of this module; monotone-decreasing in
+    gap. Constants are PROVISIONAL (sign trustworthy, magnitude not) -- see the
+    module note above.
+    """
+    g = np.asarray(gap_mm, dtype=np.float64)
+    r = g / HXR_UNDULATOR_PERIOD_MM
+    b0 = _HALBACH_A * np.exp(-_HALBACH_B * r + _HALBACH_C * r**2)
+    return 0.09337 * b0 * HXR_UNDULATOR_PERIOD_MM
 
 
 def gamma_from_momentum_gev(momentum_gev_c: ArrayLike) -> NDArray[np.float64]:

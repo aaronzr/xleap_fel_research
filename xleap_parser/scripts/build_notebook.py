@@ -393,6 +393,7 @@ nb = {
     "nbformat_minor": 4,
 }
 
-out = Path(__file__).resolve().parent / "XLEAP_detector.ipynb"
+# scripts/ lives one level below the parser root, where the notebook belongs.
+out = Path(__file__).resolve().parent.parent / "XLEAP_detector.ipynb"
 out.write_text(json.dumps(nb, indent=1, ensure_ascii=False) + "\n")
 print(f"wrote {out} ({len(cells)} cells)")

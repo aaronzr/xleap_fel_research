@@ -72,6 +72,18 @@ def test_physics_gamma_and_taper() -> None:
     assert float(taper_mev_per_fs(0.01, 2.5, gamma)) > 0
 
 
+def test_gap_to_kact_hxr() -> None:
+    """HXR gap (mm) -> K: monotone-decreasing, and a down-taper in gap (== an
+    XLEAP up-taper in K) yields increasing K so the detector fires on the right
+    sign. Magnitude is provisional; only the ordering is asserted here."""
+    from taper import kact_from_gap_mm
+
+    assert float(kact_from_gap_mm(7.0)) > float(kact_from_gap_mm(20.0)) > 0
+    gaps = np.array([12.0, 11.5, 11.0, 10.5, 10.0])  # closing gap head->tail
+    ks = kact_from_gap_mm(gaps)
+    assert np.all(np.diff(ks) > 0)  # -> rising K -> tapered
+
+
 def test_store_pivot(tmp_path) -> None:
     csv = tmp_path / "snapshots.csv"
     _synthetic_csv(csv)
@@ -210,6 +222,7 @@ def _run_standalone() -> int:
     from pathlib import Path
 
     test_physics_gamma_and_taper()
+    test_gap_to_kact_hxr()
     with tempfile.TemporaryDirectory() as d:
         test_store_pivot(Path(d))
     with tempfile.TemporaryDirectory() as d:

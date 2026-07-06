@@ -211,6 +211,11 @@ def fetch_pv(pv: str, cfg: RunConfig) -> tuple[str, list, str]:
     query = f"{cfg.bin_operator}({pv})" if cfg.bin_operator else pv
     try:
         secs_arr, vals_arr = _get_series(query, cfg)
+    except IndexError:
+        # meme's HTTP handler indexes ``pvdata[0]`` on an empty archiver response,
+        # so an IndexError here means "no data for this PV in this window" (e.g. the
+        # PV did not exist yet) -- a legitimate empty, not a fetch error.
+        return pv, [], "empty"
     except Exception as exc:  # noqa: BLE001 - report any I/O/parse failure per PV
         return pv, [], f"error: {exc}"
 

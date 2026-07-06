@@ -16,7 +16,7 @@ import pandas as pd
 
 from .constants import DEFAULT_LINE, Beamline
 from .detect import DetectionParams, first_group, lasing_kvals
-from .physics import gamma_from_momentum_gev, taper_mev_per_fs
+from .physics import gamma_from_momentum_gev, kact_from_gap_mm, taper_mev_per_fs
 from .store import SnapshotStore
 
 __all__ = [
@@ -97,6 +97,14 @@ def xleap_timeline(
     spread is unknown (legacy data with no ``spread`` column -> NaN).
     """
     kvals = store.wide_values(line.kact_pattern)
+    if line.seg_attr == "GapAct":
+        # HXR archives undulator gap (mm), not K; convert so the K-based detector
+        # and taper physics stay valid. SXR is native KAct -> identity (skipped).
+        kvals = pd.DataFrame(
+            kact_from_gap_mm(kvals.to_numpy()),
+            index=kvals.index,
+            columns=kvals.columns,
+        )
     if start is not None:
         kvals = kvals.loc[kvals.index >= pd.Timestamp(start)]
     if end is not None:

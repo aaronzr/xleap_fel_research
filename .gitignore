@@ -30,3 +30,18 @@ htmlcov/
 .idea/
 *.swp
 .DS_Store
+
+# Co-located data (calendar exports, pull outputs, samples) -- never tracked
+/data/
+
+# Claude Code local settings -- personal, never tracked
+.claude/
+CLAUDE.md
+HANDOFF.md
+AGENTS.md
+# Snapshot outputs (keep tracked inputs like pvs_sxr.csv)
+xleap_parser/snapshots_*.csv
+xleap_parser/snapshots.csv
+
+# Image outputs
+*.png

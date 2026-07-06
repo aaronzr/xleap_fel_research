@@ -23,6 +23,7 @@ from .detect import DetectionParams, first_group, lasing_kvals, lasing_mask
 from .physics import (
     dk_to_dgamma,
     gamma_from_momentum_gev,
+    kact_from_gap_mm,
     slippage_time_s,
     taper_mev_per_fs,
 )
@@ -42,6 +43,7 @@ __all__ = [
     "lasing_mask",
     "dk_to_dgamma",
     "gamma_from_momentum_gev",
+    "kact_from_gap_mm",
     "slippage_time_s",
     "taper_mev_per_fs",
     "SnapshotStore",
