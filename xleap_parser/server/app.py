@@ -22,6 +22,7 @@ seconds, default 900 = 15 min).
 from __future__ import annotations
 
 import json
+import traceback
 from dataclasses import dataclass
 from datetime import datetime
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -153,6 +154,7 @@ class Router:
         except ArchiveError as exc:
             return 502, {"error": str(exc)}
         except Exception as exc:  # noqa: BLE001 - surface any bug as a 500, not a crash
+            traceback.print_exc()  # full trace to stderr to aid debugging
             return 500, {"error": f"{type(exc).__name__}: {exc}"}
 
     def _route(self, path: str, query: dict[str, list[str]]) -> Any:

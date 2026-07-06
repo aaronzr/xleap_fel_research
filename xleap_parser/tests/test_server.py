@@ -168,6 +168,17 @@ def test_bad_requests(tmp_path) -> None:
     assert status == 400
 
 
+def test_offset_timestamps_normalize_to_utc(tmp_path) -> None:
+    """A ``+02:00`` start/end must map to the same UTC window as its ``Z`` form,
+    regardless of the machine's local timezone."""
+    router, _ = _router(tmp_path)
+    # 06:00+02:00 == 04:00Z (START); 06:45+02:00 == 04:45Z (END)
+    offset_q = {"start": ["2024-06-10T06:00:00+02:00"], "end": ["2024-06-10T06:45:00+02:00"]}
+    status, body = router.dispatch("GET", f"/pv/{MOM_PV}", offset_q)
+    assert status == 200 and body["count"] == 3
+    assert body["values"][0]["timestamp"] == "2024-06-10T04:00:00"
+
+
 def test_response_is_json_serializable(tmp_path) -> None:
     router, _ = _router(tmp_path)
     _, body = router.dispatch("GET", "/pull_all", _q())
@@ -186,6 +197,7 @@ def _run_standalone() -> int:
         test_pull_all_then_taper_uses_cache,
         test_custom_window_and_interval_are_separate_cache_buckets,
         test_bad_requests,
+        test_offset_timestamps_normalize_to_utc,
         test_response_is_json_serializable,
     ]
     for test in tests:

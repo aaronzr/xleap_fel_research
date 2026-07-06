@@ -24,7 +24,7 @@ from __future__ import annotations
 import csv
 import json
 import threading
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 __all__ = ["TimeSeriesCache", "cache_key", "parse_dt", "iso_naive"]
@@ -38,8 +38,8 @@ _TIME_COLUMN = "nominal_time"
 
 def iso_naive(dt: datetime) -> str:
     """Canonical naive-UTC ISO-seconds spelling used for stored timestamps."""
-    if dt.tzinfo is not None:
-        dt = dt.astimezone(tz=None).replace(tzinfo=None)
+    if dt.tzinfo is not None:  # normalise to UTC (not system-local) before dropping tz
+        dt = dt.astimezone(timezone.utc).replace(tzinfo=None)
     return dt.replace(microsecond=0).isoformat()
 
 
@@ -54,8 +54,8 @@ def parse_dt(value: str) -> datetime:
     if text.endswith(("Z", "z")):
         text = text[:-1] + "+00:00"
     dt = datetime.fromisoformat(text)
-    if dt.tzinfo is not None:
-        dt = dt.astimezone(tz=None).replace(tzinfo=None)
+    if dt.tzinfo is not None:  # normalise to UTC (not system-local) before dropping tz
+        dt = dt.astimezone(timezone.utc).replace(tzinfo=None)
     return dt.replace(microsecond=0) if dt.microsecond else dt
 
 
