@@ -38,7 +38,7 @@ _TIME_COLUMN = "nominal_time"
 
 def iso_naive(dt: datetime) -> str:
     """Canonical naive-UTC ISO-seconds spelling used for stored timestamps."""
-    if dt.tzinfo is not None:  # normalise to UTC (not system-local) before dropping tz
+    if dt.tzinfo is not None:  # normalize to UTC (not system-local) before dropping tz
         dt = dt.astimezone(timezone.utc).replace(tzinfo=None)
     return dt.replace(microsecond=0).isoformat()
 
@@ -47,14 +47,14 @@ def parse_dt(value: str) -> datetime:
     """Parse an ISO8601 string (optionally ``Z``-suffixed) to naive UTC.
 
     Accepts the ``Z`` Zulu suffix (which ``datetime.fromisoformat`` rejects on
-    older Pythons) and normalises any aware value to naive UTC so all cached and
+    older Pythons) and normalizes any aware value to naive UTC so all cached and
     requested timestamps live on one comparable scale.
     """
     text = value.strip()
     if text.endswith(("Z", "z")):
         text = text[:-1] + "+00:00"
     dt = datetime.fromisoformat(text)
-    if dt.tzinfo is not None:  # normalise to UTC (not system-local) before dropping tz
+    if dt.tzinfo is not None:  # normalize to UTC (not system-local) before dropping tz
         dt = dt.astimezone(timezone.utc).replace(tzinfo=None)
     return dt.replace(microsecond=0) if dt.microsecond else dt
 
