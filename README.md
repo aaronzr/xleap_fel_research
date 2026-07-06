@@ -64,3 +64,54 @@ summarizes the run.
 If a short window shows transient PVA errors on the first attempt, retry
 — cold-start auth handshakes can drop a few requests before the
 connection warms up.
+
+## API server
+
+The `xleap_parser.server` package serves the same numbers on demand over HTTP,
+one endpoint per PV or derived quantity. Every response is cached to CSV, and a
+request checks that cache before it ever calls MEME.
+
+Run from `xleap_parser/` so the default `pvs_<line>.csv` and the `snapshots` /
+`taper` packages resolve:
+
+```bash
+cd xleap_parser
+python -m server --host 127.0.0.1 --port 8000 --cache-dir cache
+```
+
+### Endpoints
+
+| Endpoint | Returns |
+| --- | --- |
+| `GET /health` | liveness probe |
+| `GET /pvs` | the PVs and quantities this server serves |
+| `GET /pv/<PV>` | timestamped values for one PV |
+| `GET /taper` | derived taper (MeV/fs) per nominal time |
+| `GET /n_und` | derived number of lasing undulators per nominal time |
+| `GET /pull_all` | pull all undulator + beam-energy PVs, compute & cache the whole derived timeline |
+
+Every data endpoint takes `start` and `end` (ISO8601 UTC, required) plus an
+optional snapshot `window` (motion window in seconds, default `5`) and `interval`
+(nominal-grid spacing in seconds, default `900` = 15 min):
+
+```bash
+curl "http://127.0.0.1:8000/pv/BEND:DMPS:400:BACT?start=2026-06-01T00:00:00Z&end=2026-06-02T00:00:00Z"
+curl "http://127.0.0.1:8000/taper?start=2026-06-01T00:00:00Z&end=2026-06-02T00:00:00Z&window=5&interval=900"
+curl "http://127.0.0.1:8000/pull_all?start=2026-06-01T00:00:00Z&end=2026-06-02T00:00:00Z"
+```
+
+### Caching and filters
+
+Results are cached under `--cache-dir` as long CSVs (`pv_cache.csv`,
+`derived_cache.csv`) with a sidecar `*.coverage.json` recording which time spans
+have already been fetched — so a repeat or sub-range request is served from the
+CSV instead of re-hitting MEME. The cache key bundles the PV/quantity, `window`,
+and `interval`, so requests at a different resolution get their own bucket.
+
+The derived endpoints (`/taper`, `/n_und`, `/pull_all`) run the notebook's taper
+analysis: for each nominal time they report the first lasing group's taper and
+the number of lasing undulators. Time points where an undulator moved within the
+snapshot `window`, or where the beam energy was unsteady across the bin, are
+skipped for the taper / lasing-group calculation (`taper` `null`, `n_und` `0`)
+while staying visible in the timeline, flagged `moving` / `energy_unsteady`.
+

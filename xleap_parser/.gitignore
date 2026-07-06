@@ -14,3 +14,6 @@ venv/
 
 # Regenerable data (produced by `python -m snapshots`)
 snapshots.csv
+
+# Server response cache (produced by `python -m server`)
+cache/
